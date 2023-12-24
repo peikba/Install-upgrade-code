@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Your own server",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "OnPrem",
+            "server": "http://localhost",
+            "serverInstance": "BC230",
+            "authentication": "Windows",
+            "breakOnError": "All",
+            "launchBrowser": true,
+            "startupObjectId": 50149,
+            "startupObjectType": "Page",
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "tenant": "default",
+            "usePublicURLFromServer": true,
+            "schemaUpdateMode": "Recreate"
+        }
+    ]
+}
