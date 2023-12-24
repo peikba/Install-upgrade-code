@@ -25,15 +25,20 @@ table 50149 "Version Info"
         {
             DataClassification = SystemMetadata;
         }
-        field(6;"Is Installing"; Boolean)
-        {
-            DataClassification = SystemMetadata;
-        }
         field(7; Name; Text[250])
         {
             DataClassification = SystemMetadata;
         }
-        field(8; Publisher ; Text[250])
+        field(8; Publisher; Text[250])
+        {
+            DataClassification = SystemMetadata;
+        }
+        field(9; "Implementation"; Option)
+        {
+            DataClassification = SystemMetadata;
+            OptionMembers = Install,Upgrade;
+        }
+        field(10; Description; Text[250])
         {
             DataClassification = SystemMetadata;
         }

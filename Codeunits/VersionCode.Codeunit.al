@@ -1,6 +1,6 @@
 codeunit 50148 "Version Code"
 {
-    internal procedure InsertVersionInfo(InModuleInfo: ModuleInfo)
+    internal procedure InsertVersionInfo(InModuleInfo: ModuleInfo; Implementation:option Install,Upgrade)
     var
         VersionInfo: Record "Version Info";
         NextVersion: Integer;
@@ -17,10 +17,11 @@ codeunit 50148 "Version Code"
         VersionInfo.PackageId := InModuleInfo.PackageId;
         VersionInfo."Version No." := NextVersion;
         VersionInfo."Data Version" := format(InModuleInfo.DataVersion);
-        VersionInfo."Is Installing" := NavApp.IsInstalling();
         VersionInfo.Name := CopyStr(InModuleInfo.Name, 1, MaxStrLen(VersionInfo.Name));
         VersionInfo.Publisher := CopyStr(InModuleInfo.Publisher, 1, MaxStrLen(VersionInfo.Publisher));
+        VersionInfo.Implementation := Implementation;
         VersionInfo.Insert();
     end;
 
 }
+

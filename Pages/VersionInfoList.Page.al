@@ -36,11 +36,6 @@ page 50149 "Version Info List"
                     ApplicationArea = All;
                     ToolTip = 'Data Version';
                 }
-                field("Is Installing"; Rec."Is Installing")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Is Installing';
-                }
                 field(Name;Rec.Name)
                 {
                     ApplicationArea = All;
@@ -50,6 +45,11 @@ page 50149 "Version Info List"
                 {
                     ApplicationArea = All;
                     ToolTip = 'Publisher Name';
+                }
+                field(Implementation;Rec.Implementation)
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Implementation';
                 }
             }
         }
