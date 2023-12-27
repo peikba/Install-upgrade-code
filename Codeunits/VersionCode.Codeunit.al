@@ -1,10 +1,12 @@
 codeunit 50148 "Version Code"
 {
-    internal procedure InsertVersionInfo(InModuleInfo: ModuleInfo; Implementation:option Install,Upgrade)
+    internal procedure InsertVersionInfo(IncomingModuleInfo: ModuleInfo;UpgradeTag : Text[250];Implementation: option Install,Upgrade)
     var
         VersionInfo: Record "Version Info";
         NextVersion: Integer;
+        InModuleInfo: ModuleInfo;
     begin
+
         VersionInfo.SetRange(AppId, InModuleInfo.Id);
         VersionInfo.SetRange("Version Id", Format(InModuleInfo.AppVersion));
         if VersionInfo.FindLast() then
@@ -20,6 +22,7 @@ codeunit 50148 "Version Code"
         VersionInfo.Name := CopyStr(InModuleInfo.Name, 1, MaxStrLen(VersionInfo.Name));
         VersionInfo.Publisher := CopyStr(InModuleInfo.Publisher, 1, MaxStrLen(VersionInfo.Publisher));
         VersionInfo.Implementation := Implementation;
+        VersionInfo."Upgrade Tag" := UpgradeTag;
         VersionInfo.Insert();
     end;
 
