@@ -4,14 +4,11 @@ codeunit 50149 "Upgrade Codeunit"
 
     trigger OnUpgradePerDatabase()
     var
-        VersionCode: Codeunit "Version Code";
-        ExistingModuleInfo: ModuleInfo;
+        InstallUpgradeCode: Codeunit "Install Upgrade Code";
         IncomingModuleInfo: ModuleInfo;
         Implementation: option Install,Upgrade;
     begin
-        NavApp.GetCurrentModuleInfo(ExistingModuleInfo);
-        VersionCode.InsertVersionInfo(ExistingModuleInfo, Implementation::Upgrade);
         NavApp.GetCallerModuleInfo(IncomingModuleInfo);
-        VersionCode.InsertVersionInfo(IncomingModuleInfo, Implementation::Upgrade);
+        InstallUpgradeCode.InstallUpgrade(IncomingModuleInfo,Implementation::Upgrade);
     end;
 }

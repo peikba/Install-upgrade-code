@@ -51,6 +51,11 @@ page 50149 "Version Info List"
                     ApplicationArea = All;
                     ToolTip = 'Implementation';
                 }
+                field("Upgrade Tag";Rec."Upgrade Tag") 
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Upgrade Tag';
+                }
             }
         }
         area(Factboxes)
