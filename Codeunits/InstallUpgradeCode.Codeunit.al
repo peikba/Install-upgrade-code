@@ -3,9 +3,9 @@ codeunit 50146 "Install Upgrade Code"
     procedure InstallUpgrade(ExistingModule: ModuleInfo; IncomingModule: ModuleInfo)
     var
         BaseAppVersion: Text;
-        BaseAppLocalization: Code[10];
-        ExistingVersion: Code[10];
-        IncomingVersion: Code[10];
+        BaseAppLocalization: Text;
+        ExistingVersion: Text;
+        IncomingVersion: Text;
     begin
         BaseAppVersion := Format(ExistingModule.AppVersion);
         BaseAppLocalization := Format(ExistingModule.Name);
