@@ -1,0 +1,21 @@
+{
+    "name": "SCL ruleset",
+    "description": "General ruleset for the BAC Project. Feel free to make your own additions.",
+    "rules": [
+        {
+            "id": "AA0215",
+            "action": "None",
+            "justification": "Rule removed for naming convension"
+        },
+        {
+            "id": "AA0072",
+            "action": "None",
+            "justification": "Rule removed for naming convension"
+        },
+        {
+            "id": "AA0074",
+            "action": "None",
+            "justification": "Rule removed for naming convension"
+        }
+    ]
+}
