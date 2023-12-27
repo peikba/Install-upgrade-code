@@ -42,6 +42,10 @@ table 50149 "Version Info"
         {
             DataClassification = SystemMetadata;
         }
+        field(11;"Upgrade Tag"; Text[250])
+        {
+            DataClassification = SystemMetadata;
+        }
     }
 
     keys
